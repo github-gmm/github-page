@@ -1,19 +1,18 @@
-name: GitHub Actions Build and Deploy Demo
+name: hst-dumi
+
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@main
-
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@main
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages-gmm
-        FOLDER: docs-dist
-        BUILD_SCRIPT: npm install && npm run docs:build
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: npm run docs:build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs-dist
