@@ -1,5 +1,5 @@
 {
-  "name": "hst-dumi",
+  "name": "github-page",
   "version": "0.0.6",
   "description": "A react library developed with dumi",       
   "type": "module",     
@@ -25,6 +25,7 @@
   },
   "authors": [],
   "license": "MIT",
+  "homepage": "https://github-gmm.github.io/github-page",
   "files": [
     "dist"
   ],

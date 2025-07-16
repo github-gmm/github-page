@@ -2,10 +2,10 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   outputPath: 'docs-dist',
-  base: '/hst-dumi/',
-  publicPath: '/hst-dumi/',
+  base: '/github-page/',
+  publicPath: '/github-page/',
   themeConfig: {
-    name: 'hst-dumi',
+    name: 'github-page',
     footer: false,
     nav: [
       // { title: '指南', link: '/guide' },

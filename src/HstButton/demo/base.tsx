@@ -1,4 +1,4 @@
-import { HstButton } from 'hst-dumi';
+import { HstButton } from 'github-page';
 import React from 'react';
 
 
